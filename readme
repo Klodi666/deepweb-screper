@@ -1,0 +1,58 @@
+# 🕷️ DeepWeb / Tor Onion Keyword Scraper
+
+A Python-based Tor crawler that discovers `.onion` sites, extracts links, and filters pages using keywords.  
+It also supports **Ahmia search integration** to automatically discover onion sites.
+
+> ⚠️ This tool is intended for **educational and cybersecurity research purposes only**.  
+> Always follow local laws and ethical guidelines when using Tor or dark web resources.
+
+---
+
+## 🚀 Features
+
+- 🌐 Tor (SOCKS5) proxy support
+- 🔎 Keyword-based page filtering
+- 🧠 Ahmia search engine integration (onion discovery)
+- 🔁 Recursive crawling of onion links
+- 💾 Save results to file
+- ⚡ Adjustable crawl speed (delay control)
+- 🧪 Tor connection test mode
+- 📋 Clean numbered CLI help menu
+
+---
+
+## 📦 Requirements
+
+Install dependencies:
+
+```bash
+pip install requests[socks] beautifulsoup4 colorama
+
+sudo apt update
+sudo apt install tor -y
+
+sudo systemctl start tor
+
+deepweb-scraper/
+│
+├── deepweb_scraper.py
+├── results.txt
+└── README.md
+
+python3 deepweb_scraper.py -h
+
+python3 deepweb_scraper.py \
+--ahmia cybersecurity \
+--keywords privacy security research \
+--pages 10
+
+python3 deepweb_scraper.py \
+--seed http://example.onion \
+--keywords hacking forum security \
+--pages 20 \
+--output results.txt
+
+
+python3 deepweb_scraper.py --check-tor
+
+
